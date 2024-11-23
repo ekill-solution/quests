@@ -1,0 +1,168 @@
+{
+    "debug": true,
+    "prefix": "{olive}[Quest System]{default}",
+    "database": {
+        "connection": "default_connection",
+        "tablename": "sw_quests"
+    },
+    "menu": {
+        "color": "FF00FF"
+    },
+
+    "list": [
+        {
+            "id": "planter_1",
+            "progress_key": "planted_bombs",
+            "title": "quests.events.planter_1.title",
+            "description": "quests.events.planter.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }
+        },
+        {
+            "id": "planter_2",
+            "progress_key": "planted_bombs",
+            "title": "quests.events.planter_2.title",
+            "description": "quests.events.planter.description",
+            "goal": 50,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }
+        },
+        {
+            "id": "defuser_1",
+            "progress_key": "defused_bombs",
+            "title": "quests.events.defuser_1.title",
+            "description": "quests.events.defuser.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }
+        },
+        {
+            "id": "defuser_2",
+            "progress_key": "defused_bombs",
+            "title": "quests.events.defuser_2.title",
+            "description": "quests.events.defuser.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }
+        },
+        {
+            "id": "striker_1",
+            "progress_key": "dealed_damages",
+            "title": "quests.events.striker_1.title",
+            "description": "quests.events.striker.description",
+            "goal": 500,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "striker_2",
+            "progress_key": "dealed_damages",
+            "title": "quests.events.striker_2.title",
+            "description": "quests.events.striker.description",
+            "goal": 5000,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "killer_1",
+            "progress_key": "killed_enemies",
+            "title": "quests.events.killer_1.title",
+            "description": "quests.events.killer.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "killer_2",
+            "progress_key": "killed_enemies",
+            "title": "quests.events.killer_2.title",
+            "description": "quests.events.killer.description",
+            "goal": 50,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "assister_1",
+            "progress_key": "assisted_killed_enemies",
+            "title": "quests.events.assister_1.title",
+            "description": "quests.events.assister.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "assister_2",
+            "progress_key": "assisted_killed_enemies",
+            "title": "quests.events.assister_2.title",
+            "description": "quests.events.assister.description",
+            "goal": 50,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "winner_1",
+            "progress_key": "won_rounds",
+            "title": "quests.events.winner_1.title",
+            "description": "quests.events.winner.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "winner_2",
+            "progress_key": "won_rounds",
+            "title": "quests.events.winner_2.title",
+            "description": "quests.events.winner.description",
+            "goal": 50,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },  
+        {
+            "id": "mvp_1",
+            "progress_key": "mvp_rounds",
+            "title": "quests.events.mvp_1.title",
+            "description": "quests.events.mvp.description",
+            "goal": 5,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        },
+        {
+            "id": "mvp_2",
+            "progress_key": "mvp_rounds",
+            "title": "quests.events.mvp_2.title",
+            "description": "quests.events.mvp.description",
+            "goal": 50,
+            "reward": {
+                "type": "shop_points",
+                "value": 500
+            }            
+        } 
+    ]
+}
