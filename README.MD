@@ -308,22 +308,22 @@
     <h2>⚠️ Customization</h2>
     <p>You can modify the reward and progress conditions for each quest by adjusting the fields in the configuration. The system is designed to be flexible, so you can define your own quests and set the requirements as needed.</p>
     <pre><code>
-        {
-            "id": "striker_2",
-            "progress_key": "dealed_damages",
-            "title": "quests.events.striker_2.title",
-            "description": "quests.events.striker.description",
-            "goal": 5000,
-            "reward": {
-                "type": "shop_points",
-                "value": 500
-            },
-            "require": {
-                "map":"de_inferno",
-                "weapon": "weapon_ak47"
-            }           
-        },    
-    <code></pre>
+{
+    "id": "striker_2",
+    "progress_key": "dealed_damages",
+    "title": "quests.events.striker_2.title",
+    "description": "quests.events.striker.description",
+    "goal": 5000,
+    "reward": {
+        "type": "shop_points",
+        "value": 500
+    },
+    "require": {
+        "map":"de_inferno",
+        "weapon": "weapon_ak47"
+    }           
+},    
+    </code></pre>
     <hr>
     <h2>🌍 Example of Translations</h2>
     <p>In your translation file, you can define the quest names and descriptions like this:</p>
