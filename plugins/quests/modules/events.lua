@@ -124,6 +124,7 @@ local function OnRoundEnd(event)
     end
 
 end
+
 --- @param event Event
 local function OnRoundMvp(event)
     local player = GetPlayer(event:GetInt("userid"))
@@ -131,6 +132,31 @@ local function OnRoundMvp(event)
         return
     end
     QuestManager:OnQuestEvent(player, "mvp_rounds", {progress = 1})
+end
+
+--- @param event Event
+local function OnPlayerBlind(event)
+    local victimID = event:GetInt("userid")
+    local attackerID = event:GetInt("attacker")
+    if attackerID == victimID then
+        return
+    end
+
+    local victim = GetPlayer(victimID)
+    local attacker = GetPlayer(attackerID)
+    if not attacker or attacker:IsFakeClient() or not attacker:IsValid() then
+        return
+    end
+
+    if not victim or victim:IsFakeClient() or not victim:IsValid() then
+        return
+    end
+
+    if attacker:CBaseEntity().TeamNum == victim:CBaseEntity().TeamNum then
+        return
+    end
+
+    QuestManager:OnQuestEvent(player, "blined_enemies", {progress = 1})
 end
 
 
@@ -145,3 +171,4 @@ AddEventHandler("OnPlayerHurt", OnPlayerHurt)
 AddEventHandler("OnPlayerDeath", OnPlayerDeath)
 AddEventHandler("OnRoundEnd", OnRoundEnd)
 AddEventHandler("OnRoundMvp", OnRoundMvp)
+AddEventHandler("OnPlayerBlind", OnPlayerBlind)

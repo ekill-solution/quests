@@ -278,7 +278,45 @@
             </tr>
         </tbody>
     </table>
-    <h3>7. mvp_rounds</h3>
+    <h3>7. played_rounds</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>map</td>
+                <td>String or List of Strings</td>
+            </tr>
+            <tr>
+                <td>team</td>
+                <td>Integer</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>8. mvp_rounds</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>map</td>
+                <td>String or List of Strings</td>
+            </tr>
+            <tr>
+                <td>team</td>
+                <td>Integer</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>9. blinded_enemies</h3>
     <table border="1">
         <thead>
             <tr>
