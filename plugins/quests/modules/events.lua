@@ -111,7 +111,14 @@ local function OnRoundEnd(event)
             goto continue
         end
 
-        QuestManager:OnQuestEvent(player, "won_rounds", {progress = 1})
+        local playerTeam = player:CBaseEntity().TeamNum
+        local winnerTeam = event:GetInt("winner")
+
+        if winnerTeam == playerTeam then
+            QuestManager:OnQuestEvent(player, "won_rounds", {progress = 1})
+        end
+
+        QuestManager:OnQuestEvent(player, "played_rounds", {progress = 1})
 
         ::continue::
     end
