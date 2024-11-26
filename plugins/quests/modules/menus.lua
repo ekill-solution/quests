@@ -69,6 +69,10 @@ function MenuManager:ShowActiveQuestsList(playerID)
         return
     end
 
+    table.sort(options, function (a, b)
+        return a[1] < b[1]
+    end)
+
     menus:RegisterTemporary(menuID, FetchTranslation("quests.menu.title", playerID), QuestManager.menu.color or "21FF00", options)
     player:HideMenu()
     player:ShowMenu(menuID)
