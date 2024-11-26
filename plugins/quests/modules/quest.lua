@@ -516,12 +516,12 @@ function QuestManager:RewardPlayer(player, questID)
         Utils.HandleDebug("No reward handler found for reward type: " .. tostring(quest.reward.type))
         return
     end
+    local playerID = player:GetSlot()
 
     Utils.HandleDebug("Reward handler found for type: " .. tostring(quest.reward.type) .. ". Executing handler...")
-    handler(player, quest.reward)
+    handler(playerID, quest.reward)
     Utils.HandleDebug("Reward handler executed successfully for player: " .. tostring(player))
 
-    local playerID = player:GetSlot()
     local message = FetchTranslation("quests.reward", playerID)
         :gsub("{REWARD_DESCRIPTION}", string.format("%s: %d", quest.reward.type, quest.reward.value))
         :gsub("{QUEST_TITLE}", FetchTranslation(quest.title, playerID))
