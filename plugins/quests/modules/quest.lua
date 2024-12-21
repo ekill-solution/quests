@@ -81,11 +81,8 @@ function QuestManager:LoadPlayer(playerID)
         return
     end
 
-    local query = "SELECT active, history FROM @tableName WHERE steamID = '@steamID' LIMIT 1;"
-    db:QueryParams(query, {
-        ["tableName"] = self.tableName,
-        ["steamID"] = tostring(player:GetSteamID())
-    }, function(err, result)
+    local qb = db:QueryBuilder():Table(self.tableName):Select({'active','history'}):Where('steamID','=',tostring(player:GetSteamID()))
+    qb:Execute(function(err, result)
         if Utils.HandleError(err) then return end
 
         self.playersQuest[playerID] = { active = {}, history = {} }
@@ -126,13 +123,15 @@ function QuestManager:SavePlayer(playerID, reset)
         return
     end
 
-    local query = "INSERT INTO @tableName VALUES('@steamID', '@active', '@history') ON DUPLICATE KEY UPDATE active='@active', history='@history';"
-    db:QueryParams(query, {
-        ["tableName"] = self.tableName,
-        ["steamID"] = tostring(player:GetSteamID()),
-        ["active"] = json.encode(self.playersQuest[playerID].active or {}),
-        ["history"] = json.encode(self.playersQuest[playerID].history or {}),
-    }, function(err, result)
+    local activeQuest = self.playersQuest[playerID].active or {}
+    local historyQuest = self.playersQuest[playerID].history or {}
+
+    local qb = db:QueryBuilder():Table(self.tableName):Insert({tostring(player:GetSteamID()), activeQuest, historyQuest }):OnDuplicate({
+        active = activeQuest,
+        history = historyQuest
+    })
+
+    qb:Execute(function(err, result)
         if Utils.HandleError(err) then return end
         Utils.HandleDebug("Quests saved for playerID: " .. tostring(playerID))
 
