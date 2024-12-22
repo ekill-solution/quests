@@ -55,10 +55,11 @@ function QuestManager:Initialize()
         return
     end
 
-    local query = "CREATE TABLE IF NOT EXISTS @tableName (steamID VARCHAR(17) NOT NULL PRIMARY KEY, active JSON NOT NULL, history JSON NOT NULL);"
-    db:QueryParams(query, {
-        ["tableName"] = self.tableName
-    }, function(err, result)
+    db:QueryBuilder():Table(self.tableName):Create({
+        steamID = "string|max:17|primary",
+        active = "json",
+        history ="json"
+    }):Execute(function(err, result)
         if Utils.HandleError(err) then return end
         Utils.HandleDebug("Table " .. self.tableName .. " ensured.")
     end)
