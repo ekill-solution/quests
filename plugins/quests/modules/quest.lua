@@ -357,13 +357,16 @@ function QuestManager:CheckQuestRequirements(player, questID, eventData)
     if require.weapon then
         local type = type(require.weapon)
         Utils.HandleDebug("Checking weapon requirement. Type: " .. type)
-
-        local activeWeapon = player:CBasePlayerPawn().WeaponServices.ActiveWeapon
+        local weaponService = player:CBasePlayerPawn().WeaponServices
+        if not weaponService or not weaponService:IsValid() then
+            Utils.HandleDebug("Weapon service is invalid or not found.")
+            return false
+        end
+        local activeWeapon = weaponService.ActiveWeapon
         if not activeWeapon or not activeWeapon:IsValid() then
             Utils.HandleDebug("Active weapon is invalid or not found.")
             return false
         end
-
         local weaponName = CBaseEntity(activeWeapon:ToPtr()).Parent.Entity.DesignerName
         Utils.HandleDebug("Active weapon name: " .. weaponName)
 
