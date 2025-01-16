@@ -127,7 +127,11 @@ function QuestManager:SavePlayer(playerID, reset)
     local activeQuest = self.playersQuest[playerID].active or {}
     local historyQuest = self.playersQuest[playerID].history or {}
 
-    local qb = db:QueryBuilder():Table(self.tableName):Insert({tostring(player:GetSteamID()), activeQuest, historyQuest }):OnDuplicate({
+    local qb = db:QueryBuilder():Table(self.tableName):Insert({
+        steamID = tostring(player:GetSteamID()),
+        active = activeQuest,
+        history = historyQuest
+    }):OnDuplicate({
         active = activeQuest,
         history = historyQuest
     })
