@@ -1,100 +1,130 @@
 {
     "activated" : {
-        "en": "You activated quest {QUEST_TITLE} [{PROGRESS}/{QUEST_GOAL}]"
+        "en": "You activated quest {QUEST_TITLE} [{PROGRESS}/{QUEST_GOAL}]",
+        "ro": "Ai activat misiunea {QUEST_TITLE} [{PROGRESS}/{QUEST_GOAL}]"
     },
     "deactivated": {
-        "en": "You cancelled quest {QUEST_TITLE}"
+        "en": "You cancelled quest {QUEST_TITLE}",
+        "ro": "Ai anulat misiunea {QUEST_TITLE}"
     },
     "progress": {
-        "en":"{QUEST_TITLE} [{PROGRESS}/{QUEST_GOAL}]"
+        "en":"{QUEST_TITLE} [{PROGRESS}/{QUEST_GOAL}]",
+        "ro":"{QUEST_TITLE} [{PROGRESS}/{QUEST_GOAL}]"
     },
     "reward": {
-        "en":"You completed {QUEST_TITLE}. You got {REWARD_DESCRIPTION}"
+        "en":"You completed {QUEST_TITLE}. You got {REWARD_DESCRIPTION}",
+        "ro":"Ai finalizat {QUEST_TITLE}. Ai primit {REWARD_DESCRIPTION}"
     },
 
     "menu.title": {
-        "en": "[:. Quest Menu .:]"
+        "en": "°•● QUEST MENU ●•°",
+        "ro": "°•● MENIU MISIUNI ●•°"
     },
     "menu.active.title": {
-        "en": "Active"
+        "en": "Active",
+        "ro": "Active"
     },
     "menu.history.title": {
-        "en": "History"
+        "en": "History",
+        "ro": "Istoric"
     },
     "menu.progress.title": {
-        "en": "Progress"
+        "en": "Progress",
+        "ro": "Progres"
     },
     "menu.deactive.title": {
-        "en": "Deactive"
+        "en": "Deactive",
+        "ro": "Inactive"
     },
 
     "events.planter_1.title": {
-        "en": "Planter I"
+        "en": "Planter I",
+        "ro": "Plasator I"
     },
     "events.planter_2.title": {
-        "en": "Planter II"
+        "en": "Planter II",
+        "ro": "Plasator II"
     },
     "events.planter.description": {
-        "en": "You have to plant {QUEST_GOAL} bombs."
+        "en": "You have to plant {QUEST_GOAL} bombs.",
+        "ro": "Trebuie să plantezi {QUEST_GOAL} bombe."
     },
 
     "events.defuser_1.title": {
-        "en": "Defuser I"
+        "en": "Defuser I",
+        "ro": "Dezamorsator I"
     },
     "events.defuser_2.title": {
-        "en": "Defuser II"
+        "en": "Defuser II",
+        "ro": "Dezamorsator II"
     },
     "events.defuser.description": {
-        "en": "You have to defuse {QUEST_GOAL} bombs."
+        "en": "You have to defuse {QUEST_GOAL} bombs.",
+        "ro": "Trebuie să dezamorsezi {QUEST_GOAL} bombe."
     },
 
     "events.striker_1.title": {
-        "en": "Striker I"
+        "en": "Striker I",
+        "ro": "Atacator I"
     },
     "events.striker_2.title": {
-        "en": "Striker II"
+        "en": "Striker II",
+        "ro": "Atacator II"
     },
     "events.striker.description": {
-        "en": "Deal a total of {QUEST_GOAL} damage to your enemies"
+        "en": "Deal a total of {QUEST_GOAL} damage to your enemies",
+        "ro": "Cauzează un total de {QUEST_GOAL} daune inamicilor tăi"
     },
 
     "events.killer_1.title": {
-        "en": "Killer I"
+        "en": "Killer I",
+        "ro": "Ucigaș I"
     },
     "events.killer_2.title": {
-        "en": "Killer II"
+        "en": "Killer II",
+        "ro": "Ucigaș II"
     },
     "events.killer.description": {
-        "en": "Kill {QUEST_GOAL} your enemies"
+        "en": "Kill {QUEST_GOAL} your enemies",
+        "ro": "Ucide {QUEST_GOAL} inamici"
     },
 
     "events.assister_1.title": {
-        "en": "Assister I"
+        "en": "Assister I",
+        "ro": "Asistent I"
     },
     "events.assister_2.title": {
-        "en": "Assister II"
+        "en": "Assister II",
+        "ro": "Asistent II"
     },
     "events.assister.description": {
-        "en": "Assist {QUEST_GOAL} times on killed your enemies"
+        "en": "Assist {QUEST_GOAL} times on killed your enemies",
+        "ro": "Ajută de {QUEST_GOAL} ori la uciderea inamicilor"
     },
 
     "events.winner_1.title": {
-        "en": "Winner I"
+        "en": "Winner I",
+        "ro": "Câștigător I"
     },
     "events.winner_2.title": {
-        "en": "Winner II"
+        "en": "Winner II",
+        "ro": "Câștigător II"
     },
     "events.winner.description": {
-        "en": "Win {QUEST_GOAL} rounds"
+        "en": "Win {QUEST_GOAL} rounds",
+        "ro": "Câștigă {QUEST_GOAL} runde"
     },
 
     "events.mvp_1.title": {
-        "en": "MVP I"
+        "en": "MVP I",
+        "ro": "MVP I"
     },
     "events.mvp_2.title": {
-        "en": "MVP II"
+        "en": "MVP II",
+        "ro": "MVP II"
     },
     "events.mvp.description": {
-        "en": "Collect {QUEST_GOAL} mvps"
+        "en": "Collect {QUEST_GOAL} mvps",
+        "ro": "Colectează {QUEST_GOAL} MVP-uri"
     }
 }
